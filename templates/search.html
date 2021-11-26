@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>The Searched Item</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">The Searched Item</h1>
+    <br>
+    <h2 style="text-align: left"> The Stats</h2>
+    <br>
+    <p>
+        <div>the number of tweets with {{item}} in it was {{amount}}</div>
+        <div>the average polarity of the tweets with this word in it is {{polarity}}</div>
+        <div>the average subjectivity of the tweets with this word in it is {{subjectivity}}</div>
+        <div>
+            an example tweet is: {{tweet}}
+        </div>
+    </p>
+</div>
+
+<div>Do you want to search again? <a href="/">Search</a></div>
+
+{% endblock %}
+

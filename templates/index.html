@@ -2,19 +2,25 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Master</title>
+<title>The Search Master</title>
 {% endblock %}
 
 {% block body %}
 <div class="content">
+    <table>
+        <tr>
+            <th>Random Trump Tweet</th>
+            <th>{{tweet.content}}</th>
+            <th>{{tweet.date}}</th>
+        </tr>
+    </table>
     <h1 style="text-align: center">Task Master</h1>
     {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
     {% else %}
     <table>
         <tr>
-            <th>Task</th>
-            <th>Added</th>
+            <th>Search Item</th>
+            <th>Date searched</th>
             <th>Actions</th>
         </tr>
         {% for task in tasks %}
@@ -35,5 +41,6 @@
             <input type="submit" value="Search item">
         </form>
     </div>
+
 </div>
 {% endblock %}
